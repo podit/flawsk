@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <script src="plotly-latest.min.js"></script>
+    </head>
+    <body>
+        <charset="utf-8">
+        <title>Vis</title>
+        <div id="box" style="text-align: centre; font-size: 20px; display: inline-block; border-radius: 5px;">
+            <b>API DataViz</b>
+            <input id="clickMe" type="button" value="clickme" onclick="request()" />
+        </div>
+        <div id="div">
+        </div>
+        <script>
+            var xhr = new XMLHttpRequest();
+                    
+            function request() {
+                xhr.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var msg = this.responseText;
+                        document.getElementById("div").innerHTML = msg
+                    }
+                }
+                xhr.open('get', 'http://127.0.0.1:5000/', true);
+                xhr.send(null);
+            }
+        </script>
+        <div id="plot" sytle="width:600px;height:250px;"></div>
+        <script>
+            PLOT = document.getElementById('plot');
+            Plotly.plot( PLOT, [{
+                x: [1,2,3,4,5,6,7,8,9],
+                y: [1,2,4,8,16,32,64,128,256] }], {
+                    margin: { t: 0} } );
+        </script>
+    </body>
+</html>
