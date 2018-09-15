@@ -17,6 +17,8 @@ I would advise a virtual environment to host the flask server.
 	- Flask `pip install flask`
 	- Flask CORS headers `pip install flask-cors`
 		- This handles API requests from javascript.
+    - [Goodle Visualizaition API](https://github.com/google/google-visualization-python) `pip install gviz_api`
+        - Allows for JSON outputs to be configured for Google Charts
 
 Alternatively the 'requirements.txt' lists all individual dependencies and their versions.
 
