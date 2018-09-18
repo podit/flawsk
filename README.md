@@ -49,7 +49,7 @@ Additional files
 
 The 'frontend.html' file is a testbase for more advanced API features.
 
-- Warning this file is now depreciated see the [frontend](https://bitbucket.org/tomody/flawsk-web) repo for the updated version.
+- Warning this file is now depreciated see the [frontend](https://github.com/podit/flawsk-web) repo for the updated version.
 
 The 'jsonify.py' script is used to convert .csv files into .json for more flexibility in data usage.
 
